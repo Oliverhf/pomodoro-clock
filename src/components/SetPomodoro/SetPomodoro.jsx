@@ -15,8 +15,7 @@ const SetPomodoro = () => {
 
   const handleChange = input => {
     const {name, value} = input.target // Destructuring name and value of input.target
-
-
+    
     switch(name) {
       case 'work':
         setNewTimer({
@@ -61,7 +60,7 @@ const SetPomodoro = () => {
 
   return (
     <div className="form-container">
-        <form   noValidate>
+        <form  noValidate>
             <div className="input-wrapper">
                 <input className="input" name="work" onChange={handleChange} value={newTimer.work}   />
                 <input className="input" name="shortBreak" onChange={handleChange} value={newTimer.short}   />
