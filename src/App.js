@@ -1,3 +1,4 @@
+import { CountdownCircleTimer } from "react-countdown-circle-timer";
 import SetPomodoro from "./components/SetPomodoro/SetPomodoro";
 
 function App() {
@@ -6,6 +7,7 @@ function App() {
       <h1>Pomodoro</h1>
       <small>be productive the right way.</small>
       <SetPomodoro />
+      {/* <CountdownCircleTimer /> */}
     </div>
   );
 }
