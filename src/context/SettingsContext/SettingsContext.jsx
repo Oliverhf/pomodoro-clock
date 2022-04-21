@@ -9,7 +9,7 @@ const SettingsContextProvider = (props) => {
  const [executing, setExecuting] = useState({})
  const [startAnimate, setStartAnimate] = useState(false)
 
-
+ const [btnMask, setBtnMask] = useState('btn-mask')
 
  function startTimer() {
      setStartAnimate(true)
@@ -26,6 +26,7 @@ const SettingsContextProvider = (props) => {
  const SettingBtn = () => {
      setExecuting({})
      setPomodoro(0)
+     pauseTimer()
  }
 
  function setCurrentTimer(active_state) {
@@ -46,14 +47,17 @@ const SettingsContextProvider = (props) => {
      switch(evaluate.active) {
         case 'work':
             setPomodoro(evaluate.work)
+            setBtnMask('btn-mask --work')
             break;
 
         case 'short':
             setPomodoro(evaluate.short)
+            setBtnMask('btn-mask --short')
             break;
 
         case 'long':
             setPomodoro(evaluate.long)
+            setBtnMask('btn-mask --long')
             break;
 
         default:
@@ -83,8 +87,8 @@ const SettingsContextProvider = (props) => {
         setCurrentTimer,
         updateExecute,
         SettingBtn,
-        children
-
+        children,
+        btnMask
     }}>
         {props.children}
     </SettingContext.Provider>
