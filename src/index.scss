@@ -4,16 +4,16 @@
   box-sizing: border-box;
 }
 
-$primary-color: #1D3461;
-$secondary-color: #FB3640;
-$tertiary-color: #605F5E;
+$primary-color: #14213D;
+$secondary-color: #FCA311;
+$tertiary-color: #FFFFFF;
 
-$text-color: #ebebf4;
-$background: #191d23;
+$text-color: #000000;
+$background: #637084;
 
 
 body {
-  background-color: #223e74;
+  background-color: #14213D;
   font-size: 16px;
   color: $text-color;
 
@@ -22,12 +22,12 @@ body {
 h1 {
   font-size: 52px;
   font-weight: normal;
-
+  color: rgb(240, 94, 118);
 }
 
 
  small {
-  color: $tertiary-color;
+  color: $background;
   font-weight: bold;
   text-transform: capitalize;
   font-size: 16px;
@@ -48,9 +48,8 @@ ul {
 
     & div div {
       font-size: 42px;
-      color: $secondary-color;
+      color: #FFFFFF;
       font-weight: bold;
-      opacity: 0.7;
     }
 }
 
@@ -61,8 +60,10 @@ ul {
   & button {
     width: 78px;
     background-color: $text-color;
-    color: $background;
+    color:   $tertiary-color;
     transition: all 250ms ease-out;
+    border: 2px solid $text-color;
+    font-weight: bold;
      &:nth-of-type(1) {
       border-radius: 12px 0 0 12px; 
      }
@@ -72,8 +73,11 @@ ul {
     }
 
     &.active {
-      background-color: #191d23;
-      color: $text-color;
+     background-color: $primary-color;
+     border-color: $text-color;
+     font-weight: lighter;
+     opacity: 0.7;
+     font-size: small;
     }
   }
 }
@@ -99,6 +103,8 @@ ul {
   &.--long{
     transform: translate3d(205px,25px,0px);
   }
+
+  
 }
 
 .container {
@@ -111,18 +117,25 @@ ul {
 
 
 input {
-  background-color: $background;
+  background-color: $tertiary-color;
   color: $text-color;
   border: unset;
-  max-width: 120px;
-  height: 120px;
+  max-width: 140px;
+  height: 140px;
   text-align: center;
   border-radius: 50%;
-  font-size: 20px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+input:focus {
+  outline-color: $tertiary-color;
+  border: 2px solid $tertiary-color;
+  transform: scale(1.06);
 }
 
 button {
-  background-color: $background;
+  background-color: $tertiary-color;
   color: $text-color;
   border: unset;
   border-radius: 12px;
@@ -136,7 +149,9 @@ button {
 }
 
 .labels {
+  
   & li {
+
     &:nth-of-type(1){
      
       button {
@@ -156,8 +171,20 @@ button {
      
       button {
         border-radius: 0 12px 12px 0;
+        
       }
 
     }
   }
+}
+
+
+form {
+  & button {
+    background: #688cd8;
+  }
+}
+
+.settings {
+  background: #688cd8;
 }

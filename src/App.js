@@ -34,7 +34,6 @@ function App() {
         <>
           <ul className="labels">
                 <div className={btnMask}>
-
                 </div>
             <li>
               <Button
@@ -58,7 +57,7 @@ function App() {
               />
             </li>
           </ul>
-          <Button title="Settings" _callback={SettingBtn} />
+          <Button activeClass={'settings'} title="Settings" _callback={SettingBtn} />
           <div className="time-container">
             <div className="time-wrapper">
                 <CountdownAnimation 
